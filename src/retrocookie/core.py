@@ -159,6 +159,9 @@ def retrocookie(
     template_directory = find_template_directory(repository)
     commits = get_commits(instance, commits, branch, upstream)
 
+    if path:
+        template_directory = path.parts[-1] / template_directory
+
     with temporary_repository() as scratch:
         commits = rewrite_commits(
             scratch,

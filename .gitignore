@@ -8,3 +8,6 @@
 /docs/_build/
 /src/*.egg-info/
 __pycache__/
+/build
+.DS_Store
+*.code-workspace
